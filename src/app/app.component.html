@@ -1,4 +1,18 @@
+<h1>Real time chat app</h1>
 
-<h1>hi from angular</h1>
+<hr>
 
-<router-outlet></router-outlet>
+
+<div *ngFor="let item of messageArray">
+    <p id="rcorners1" style=" border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 500px;
+    height: 10px;  ">{{item}}</p>
+   
+</div>
+
+<input style="  padding: 10px;  border: 2px solid #73AD21;" type="text" [(ngModel)]="messageText">&nbsp;&nbsp;
+<button style=" border: 1px solid #73AD21;" type="button" (click)="sendMessage()">send</button>
+
+<!-- ======================================== -->
